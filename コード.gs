@@ -1,8 +1,8 @@
 // WebhookURLを追加
-let postUrl = "https://hooks.slack.com/services/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";
+let postUrl = "WebhookURL";
 
 // botを投入したいチャンネル名を追加
-let postChannel = "#丸の内_対応ヘルプ";
+let postChannel = "#任意のch名を記載";
       
 // 使用するシートを取得
 let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('予定表'); 
@@ -42,16 +42,16 @@ function scheduleRemind(){
     // ここでslackへ投稿する
     sendHttpPost_('<!here> \
                   \n本日の統括＆TL陣の勤務予定です。\
-                  \n```櫻井： ' + reminder[0] + ' \
-                  \n杉山： ' + reminder[1] + ' \
-                  \n丸山： ' + reminder[2] + ' \
-                  \n西村： ' + reminder[3] + ' \
-                  \n小玉： ' + reminder[4] + ' \
-                  \n荒木： ' + reminder[5] + ' \
-                  \n平野： ' + reminder[6] + ' \
+                  \n```テスト太郎： ' + reminder[0] + ' \
+                  \nテスト次郎： ' + reminder[1] + ' \
+                  \nテスト三郎： ' + reminder[2] + ' \
+                  \nテスト四郎： ' + reminder[3] + ' \
+                  \nテスト五郎： ' + reminder[4] + ' \
+                  \nテスト六郎： ' + reminder[5] + ' \
+                  \nテストなな郎： ' + reminder[6] + ' \
                   \n```','統括＆TL陣スケジュールbot',':marunouchi:');
   } else {
-    sendHttpPost_('<@U010TR72L72> \nシフト表にエラーが発生しました。至急修正してください。','統括＆TL陣スケジュールbot',':marunouchi:');
+    sendHttpPost_('<@slackのユーザID> \nシフト表にエラーが発生しました。至急修正してください。','統括＆TL陣スケジュールbot',':marunouchi:');
   }
   
 };
